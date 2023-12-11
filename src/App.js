@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import Page1 from './Components/Page1';
-import Page2 from './Components/Page2';
+import Page1 from './Components/PageOne';
+import Page2 from './Components/PageTwo';
 
 function App() {
   return (
