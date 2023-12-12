@@ -1,15 +1,15 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import Page1 from './Components/PageOne';
-import Page2 from './Components/PageTwo';
+import PageOne from './Components/PageOne';
+import PageTwo from './Components/PageTwo';
 
 function App() {
   return (
     
  <BrowserRouter>
  <Routes>
-<Route path='/' element ={<Page1/>}/>
-<Route path='two' element={<Page2/>}/>
+<Route path='/' element ={<PageOne/>}/>
+<Route path='two' element={<PageTwo/>}/>
  </Routes>
  </BrowserRouter>
   );
