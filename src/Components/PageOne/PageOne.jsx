@@ -1,6 +1,6 @@
 import { Button } from "@mui/material"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+
 
 
 
@@ -32,8 +32,7 @@ function Page1(){
     <Button  disabled ={valueDisabled} onClick={handlerClickPlusThree }> Pluss 3 </Button>
     <Button disabled ={valueDisabled}  onClick={handlerClickPlusTen}>Minus 10</Button>
     <Button checked ={valueInclued} onClick={handlerStartStop}>plus 1 per second</Button>
-    <p>Go page 2</p>
-        <Link to="/two">Page Two</Link>
+
 <h1>{value}</h1>
       
   </div>
