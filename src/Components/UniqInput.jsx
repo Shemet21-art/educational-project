@@ -1,6 +1,6 @@
 import {  TextField} from "@mui/material"
  
- function UniqInput({label,onChange}){
+ function UniqInput({label,onChange,value}){
 
 
   return(
@@ -8,6 +8,7 @@ import {  TextField} from "@mui/material"
   variant="filled"
   label={label}
   onChange={onChange}
+  value={value}
   />)
 }
 export default UniqInput
