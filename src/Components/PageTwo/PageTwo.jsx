@@ -21,16 +21,13 @@ function Page2() {
 
     const dispatch = useDispatch()
 
-    const addvalueEmaill =()=>{dispatch(addEmaill({ email:emailValue, nameUser:nameValue, number: numberValue}))}
-
-
-
-    function sendEmail() {
-        console.log("email", emailValue)
-        console.log("number", numberValue)
-        console.log("Имя Фамилия", nameValue)
-
+    const addvalueEmaill =()=>{
+        dispatch(addEmaill({ email:emailValue, nameUser:nameValue, number: numberValue}))
+        setEmailValue('')
+        setNumberValue('')
+        setNameValue('')
     }
+
     return (
         <div>
             <p>Go page one</p>
@@ -38,20 +35,23 @@ function Page2() {
             <div>
                 <UniqInput
                     label="email"
+                  value={emailValue}
                     onChange={(e) => setEmailValue(e.target.value)}
                 
                 />
-                <Button onClick={sendEmail}>Отправить</Button> <Button onClick={addvalueEmaill}>почта</Button>
+                <Button onClick={addvalueEmaill}>В стор </Button>
             </div>
             <div>
                 <UniqInput
                     label="введи номер сучка"
+                 value={numberValue}
                     onChange={(e) => setNumberValue(e.target.value)}
                 />
             </div>
             <div>
                 <UniqInput
                     label={'введи имя фамилию'}
+                  value={nameValue}
                     onChange={(e) => setNameValue(e.target.value)}
                 />
             </div>

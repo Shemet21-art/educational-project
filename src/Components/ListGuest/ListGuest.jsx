@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import UniqInput from "../UniqInput";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
+import { useDispatch, useSelector } from "react-redux";
+import { addGuests } from "../../store/reducers/listGuestSlice/listGuestSlice";
 
-import Typography from '@mui/material/Typography';
+
 
 const style = {
   position: 'absolute',
@@ -18,19 +20,16 @@ const style = {
   p: 4,
 };
 
-function guestInfo(name, surname) {
-  return { name, surname }
 
-}
-const listNamesGuests = []
+
+
+
 
 
 function ListGuest() {
-  useEffect(() => {
-    if (nameValue !== nameValue) {
-      setNameValue()
-    }
-  })
+
+  const listStore =useSelector(store => store.listGuest.listGuest)
+  const dispatch = useDispatch()
 
   const [nameValue, setNameValue] = useState('')
   const [surnameValue, setSurnameValue] = useState('')
@@ -42,7 +41,7 @@ function ListGuest() {
 
   function addEvent() {
     if (nameValue !== '' && surnameValue !== '') {
-      listNamesGuests.push(guestInfo(nameValue, surnameValue))
+      dispatch(addGuests({name: nameValue, surname: surnameValue}))
       setNameValue('')
       setSurnameValue('')
     }
@@ -51,7 +50,8 @@ function ListGuest() {
 
   }
   return (<>
-    <h1>Здесь будет список</h1>
+    <h1>Список со стора
+    </h1>
     <div>
       <TableContainer>
         <Table>
@@ -62,10 +62,11 @@ function ListGuest() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {listNamesGuests.map((guest) => (<TableRow key={Math.random()}>
-              <TableCell>{guest.name}</TableCell>
-              <TableCell>{guest.surname}</TableCell>
-            </TableRow>))}
+           {listStore.map((item)=>(<TableRow key={Math.random()}>
+            <TableCell>{item.listGuestsValue.name}</TableCell>
+            <TableCell>{item.listGuestsValue.surname}</TableCell>
+           </TableRow>)
+)}
           </TableBody>
         </Table>
       </TableContainer>
