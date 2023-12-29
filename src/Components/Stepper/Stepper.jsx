@@ -69,15 +69,19 @@ function Stepper (){
 console.log(count)
 
     function addCount(){
+        if(count < 4){
      setCount((count)=>{
-      return count + 1 
-        
-     })
+      return count + 1   
+     })}
+     return count
     }
 
     function minusCount(){
-
-    setCount(count-1)
+if( count > 0){
+    setCount((count)=>{
+        return count -1
+    })}
+    return count
     }
 
     return (
