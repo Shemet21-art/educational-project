@@ -1,6 +1,8 @@
 import { Button } from "@mui/material"
 import UniqInput from "../UniqInput"
 import { useState } from "react"
+import { styled } from '@mui/material/styles';
+
 
 function Stepper (){
 
@@ -11,6 +13,20 @@ function Stepper (){
     const [adress, setAdress] = useState('')
     const [gender, setGender] = useState('')
     const [country, setCountry] = useState('')
+    const [img, setImg] = useState('')
+
+
+    const VisuallyHiddenInput = styled('input')({
+        clip: 'rect(0 0 0 0)',
+        clipPath: 'inset(50%)',
+        height: 1,
+        overflow: 'hidden',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        whiteSpace: 'nowrap',
+        width: 1,
+      });
 
 
     function step(){ 
@@ -30,7 +46,10 @@ function Stepper (){
             );
             case 2: return(
                 <div>
-                    <h1>step3</h1>
+                    <Button component="label" variant="contained" >
+                            Upload file
+                        <VisuallyHiddenInput accept="image/png, image/jpeg" type="file"  onChange={(e)=>setImg(e.target.files)}/>
+                    </Button>
                 </div>
             );
             case 3: return(
@@ -40,7 +59,7 @@ function Stepper (){
                 </div>
             );
             case 4: return(
-                console.log("Name :", name, "Surname :", surname, "Number :", number, "Adress :", adress, "Gender :", gender, "Country:", country ),
+                console.log("Name :", name, "Surname :", surname, "Number :", number, "Adress :", adress, "Gender :", gender, "Country:", country, "IMG :", img ),
                 <h1>ЭТО КОНЕЦ!!!</h1>
             )
 
