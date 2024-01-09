@@ -1,8 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+interface IListGuestState {
+    listGuest : Array<object>
+}
+
 const listGuestSlice =  createSlice({
     name: "listGuest",
-    initialState: {
+    initialState: <IListGuestState> {
         listGuest : [],
     },
     reducers:{

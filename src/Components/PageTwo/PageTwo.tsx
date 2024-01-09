@@ -4,14 +4,23 @@ import { useState } from "react";
 import UniqInput from "../UniqInput";
 import { useDispatch, useSelector } from "react-redux";
 import { addEmaill} from "../../store/reducers/pageTwoSlice/pageTwoSlice";
+import * as React from "react";
 
+interface IFormValuePageTwo{
+email: string,
+nameUser: string,
+number: number
+}
 
+interface dataPageTwo { 
+[key:string]: IFormValuePageTwo
+}
 
 
 
 
 function Page2() {
-    const dataPageTwo = useSelector(state => state.dataPageTwo.dataPageTwo)
+    const dataPageTwo:Array<dataPageTwo> = useSelector((state:Storage) => state.dataPageTwo.dataPageTwo)
 
     console.log(dataPageTwo)
 
@@ -36,7 +45,7 @@ function Page2() {
                 <UniqInput
                     label="email"
                   value={emailValue}
-                    onChange={(e) => setEmailValue(e.target.value)}
+                    onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEmailValue(e.target.value)}
                 
                 />
                 <Button onClick={addvalueEmaill}>В стор </Button>
@@ -45,14 +54,14 @@ function Page2() {
                 <UniqInput
                     label="введи номер сучка"
                  value={numberValue}
-                    onChange={(e) => setNumberValue(e.target.value)}
+                    onChange={(e:React.ChangeEvent<HTMLInputElement>) => setNumberValue(e.target.value)}
                 />
             </div>
             <div>
                 <UniqInput
                     label={'введи имя фамилию'}
                   value={nameValue}
-                    onChange={(e) => setNameValue(e.target.value)}
+                    onChange={(e:React.ChangeEvent<HTMLInputElement>) => setNameValue(e.target.value)}
                 />
             </div>
 

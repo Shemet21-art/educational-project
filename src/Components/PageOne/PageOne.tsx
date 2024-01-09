@@ -7,8 +7,8 @@ function Page1() {
 
   const [intervalId, setIntervalId] = useState(0);
 
-  function handlerChange(numb) {
-    setValue((value)=>{
+  function handlerChange(numb:number) {
+    setValue((value:number)=>{
       if( value > 100 ){
         return value = 0 
       }
@@ -22,9 +22,9 @@ function Page1() {
   const handlerClickPlusTen = () => setValue(value > 10 ? value - 10 : 0);
 
   const add = () => {
-    setLoading((prevStart) => {
+    setLoading((prevStart:boolean) => {
       if ( prevStart === false) {
-        const id = setInterval(() => {
+        const id:any = setInterval(() => {
           setValue((value) => value + 1);
         }, 1000);
         setIntervalId(id);
@@ -42,8 +42,7 @@ function Page1() {
       <Button onClick={() => handlerChange(3)}> Pluss 3 </Button>
       <Button onClick={handlerClickPlusTen}>Minus 10</Button>
       <Button onClick={()=>handlerChange(10)} >Plus 10 </Button>
-      <Button onClick={add}>plus 1 per second</Button>
-
+      <Button onClick={add}>plus 1 per second</Button>c
       <h1>{value}</h1>
     </div>
   );

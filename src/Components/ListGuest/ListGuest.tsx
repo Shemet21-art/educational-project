@@ -1,5 +1,5 @@
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import UniqInput from "../UniqInput";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -20,16 +20,23 @@ const style = {
   p: 4,
 };
 
+interface IlistGuestValue { 
+  name: string,
+  surname: string
+}
 
-
+interface IlistStore { 
+  [key:string]: IlistGuestValue
+}
 
 
 
 
 function ListGuest() {
 
-  const listStore =useSelector(store => store.listGuest.listGuest)
+  const listStore : Array<IlistStore>  = useSelector((store:Storage)=> store.listGuest.listGuest)
   const dispatch = useDispatch()
+
 
   const [nameValue, setNameValue] = useState('')
   const [surnameValue, setSurnameValue] = useState('')
@@ -84,12 +91,12 @@ function ListGuest() {
           <UniqInput
             label={"Введите имя гостя"}
             value={nameValue}
-            onChange={(e) => setNameValue(e.target.value)}
+            onChange={(e:React.ChangeEvent<HTMLInputElement>) => setNameValue(e.target.value)}
           />
           <UniqInput
             label={"Введите фамилию гостя"}
             value={surnameValue}
-            onChange={(e) => setSurnameValue(e.target.value)}
+            onChange={(e:React.ChangeEvent<HTMLInputElement>) => setSurnameValue(e.target.value)}
           />
           <Button onClick={addEvent}>Add</Button>
         </form>  </Box>
