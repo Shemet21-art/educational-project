@@ -44,8 +44,8 @@ function Page2() {
             <div>
                 <UniqInput
                     label="email"
-                  value={emailValue}
-                    onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEmailValue(e.target.value)}
+                    value={emailValue}
+                    onChange={(e) => setEmailValue(e.target.value)}
                 
                 />
                 <Button onClick={addvalueEmaill}>В стор </Button>
@@ -54,14 +54,14 @@ function Page2() {
                 <UniqInput
                     label="введи номер сучка"
                  value={numberValue}
-                    onChange={(e:React.ChangeEvent<HTMLInputElement>) => setNumberValue(e.target.value)}
+                    onChange={(e) => setNumberValue(e.target.value)}
                 />
             </div>
             <div>
                 <UniqInput
                     label={'введи имя фамилию'}
                   value={nameValue}
-                    onChange={(e:React.ChangeEvent<HTMLInputElement>) => setNameValue(e.target.value)}
+                    onChange={(e) => setNameValue(e.target.value)}
                 />
             </div>
 

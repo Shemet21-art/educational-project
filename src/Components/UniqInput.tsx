@@ -1,7 +1,12 @@
 import { TextField } from "@mui/material"
 
-function UniqInput({ label, onChange, value }) {
+type Props = { 
+  label : string;
+  onChange: (e:React.ChangeEvent<HTMLInputElement>)=>void
+  value: string;
+}
 
+function UniqInput({ label, onChange, value }:Props) {
 
   return (
     <TextField

@@ -34,14 +34,14 @@ function Stepper (){
             case 0: return (
             <div>
                 <h1>Name</h1>
-                <UniqInput value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)} label={"Имя"}/>
-                <UniqInput value={surname} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setSurname(e.target.value)} label={"Фамилия"}/>
+                <UniqInput value={name} onChange={(e)=>setName(e.target.value)} label={"Имя"}/>
+                <UniqInput value={surname} onChange={(e)=>setSurname(e.target.value)} label={"Фамилия"}/>
             </div>);    
             case 1: return (
                 <div>
                     <h1> ADRESS</h1>
-                  <UniqInput value={adress} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setAdress(e.target.value)} label={"АДРЕСС"}/>
-                <UniqInput value={number} onChange={(e:React.ChangeEvent<HTMLInputElement>)=> setNumber(e.target.value)} label={"НОМЕР"}/>
+                  <UniqInput value={adress} onChange={(e)=>setAdress(e.target.value)} label={"АДРЕСС"}/>
+                <UniqInput value={number} onChange={(e)=> setNumber(e.target.value)} label={"НОМЕР"}/>
                 </div>
             );
             case 2: return(
@@ -54,8 +54,8 @@ function Stepper (){
             );
             case 3: return(
                 <div>
-                   <UniqInput value={gender} onChange={(e:React.ChangeEvent<HTMLInputElement>)=> setGender(e.target.value)} label={"ПОЛ"}/>
-                <UniqInput value={country} onChange={(e:React.ChangeEvent<HTMLInputElement>)=> setCountry(e.target.value)} label={"СТРАНА"}/>
+                   <UniqInput value={gender} onChange={(e)=> setGender(e.target.value)} label={"ПОЛ"}/>
+                <UniqInput value={country} onChange={(e)=> setCountry(e.target.value)} label={"СТРАНА"}/>
                 </div>
             );
             case 4: return(
@@ -67,7 +67,7 @@ function Stepper (){
     }
 
 
-    function addCount(){
+    function addCount():number{
         if(count < 4){
      setCount((count)=>{
       return count + 1   
@@ -75,7 +75,7 @@ function Stepper (){
      return count
     }
 
-    function minusCount(){
+    function minusCount():number{
 if( count > 0){
     setCount((count)=>{
         return count -1

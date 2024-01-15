@@ -7,21 +7,21 @@ function Page1() {
 
   const [intervalId, setIntervalId] = useState(0);
 
-  function handlerChange(numb:number) {
+  function handlerChange(numb:number):void {
     setValue((value:number)=>{
       if( value > 100 ){
         return value = 0 
       }
       else{
-      const resChang = value + numb;
+      const resChang:number = value + numb;
         return resChang;}
         
     })
    
   }
-  const handlerClickPlusTen = () => setValue(value > 10 ? value - 10 : 0);
+  const handlerClickPlusTen = ():void => setValue(value > 10 ? value - 10 : 0);
 
-  const add = () => {
+  const add = ():void => {
     setLoading((prevStart:boolean) => {
       if ( prevStart === false) {
         const id:any = setInterval(() => {
