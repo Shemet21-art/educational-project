@@ -1,0 +1,11 @@
+{
+    "clients": [
+      {"id":"1", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" },
+      {"id":"2", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" },
+      {"id":"3", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" },
+      {"id":"4", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" },
+      {"id":"5", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" },
+      {"id":"6", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" },
+      {"id":"7", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" }
+    ] 
+  }

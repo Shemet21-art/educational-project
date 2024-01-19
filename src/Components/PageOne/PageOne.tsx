@@ -42,7 +42,7 @@ function Page1() {
       <Button onClick={() => handlerChange(3)}> Pluss 3 </Button>
       <Button onClick={handlerClickPlusTen}>Minus 10</Button>
       <Button onClick={()=>handlerChange(10)} >Plus 10 </Button>
-      <Button onClick={add}>plus 1 per second</Button>c
+      <Button onClick={add}>plus 1 per second</Button>
       <h1>{value}</h1>
     </div>
   );
