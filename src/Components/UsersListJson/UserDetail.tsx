@@ -1,9 +1,21 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
 
+interface Client  {
+id: number;
+name: string;
+surname:string;
+number:string;
+email: string;
+url:string
+}
+
+
+
 function UserDetail(){
 
-    const [client, setClient]:any = useState([])
+    const [client, setClient] = useState<Client>(Object)
+
 
     const {id} = useParams()
     const getJsonData = async () => {
@@ -17,7 +29,6 @@ function UserDetail(){
       useEffect(() => {
         getJsonData();
       }, []);
-    console.log(id)
 
     return(
         
