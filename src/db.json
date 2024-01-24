@@ -7,5 +7,48 @@
       {"id":"5", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" },
       {"id":"6", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" },
       {"id":"7", "name":"Jon", "surname":"Jonson","number":"+380999999","email":"gooog@gmail.com","url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwt7n3BVyEHpH_1PBP9WZ69T1giKCRTizXg&usqp=CAU" }
-    ] 
+    ],
+      "folders": 
+          {
+              "type": "dir",
+              "name": "2",
+              "data": [
+               {
+                "type": "file",
+                "name": "file_dir"
+               },
+               {
+                "type":"dir",
+                "name": "example",
+                "data":[
+                  {
+                    "type":"dir",
+                    "name":"3333",
+                    "data":[
+                      {
+                        "type":"file",
+                        "name":"444545555"
+                       }
+                      ]
+                  },
+                  {
+                    "type":"dir",
+                    "name":"22222",
+                    "data":[
+                      {
+                        "type":"file",
+                        "name":"4455"
+                       }
+                    ]
+                  },
+                  {
+                    "type":"dir",
+                    "name":"22222"
+                  }
+                ]
+               }
+              ]
+             }    
+      
   }
+  

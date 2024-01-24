@@ -10,6 +10,7 @@ function Header(){
     <div><Link to="/listAdd">Guest list</Link></div>
     <div><Link to="/stepper">Stepper</Link></div>
     <div><Link to="/UsersListJson">UsersListJson</Link></div>
+    <div><Link to="/testFolder">TestFolder</Link></div>
      </>
     )
 }
